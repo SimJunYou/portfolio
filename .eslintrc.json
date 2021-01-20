@@ -20,8 +20,9 @@
     ],
     "rules": {
         "linebreak-style": "off",
-        "indent": ["error", 4],
+        "indent": ["error", 2],
         "no-console": "off",
-        "react/jsx-filename-extension": "off"
+        "react/jsx-filename-extension": "off",
+        "jsx-a11y/anchor-is-valid": "off"
     }
 }

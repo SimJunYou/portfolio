@@ -18,11 +18,11 @@ app.use(mount('/', staticPages));
 app.use(logger());
 
 router.get('getPage', '/', (ctx) => {
-    console.log(`Received: ${ctx.request.body}`);
+  console.log(`Received: ${ctx.request.body}`);
 });
 
 router.post('postPage', '/', bodyParser(), (ctx) => {
-    console.log(`Received: ${ctx.request.body}`);
+  console.log(`Received: ${ctx.request.body}`);
 });
 
 app.use(router.routes());
