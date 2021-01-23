@@ -17,6 +17,10 @@ app.use(mount('/', staticPages));
 
 app.use(logger());
 
+// Serve static files
+const files = path.join(__dirname, 'public');
+app.use(serve(files));
+
 router.get('getPage', '/', (ctx) => {
   console.log(`Received: ${ctx.request.body}`);
 });

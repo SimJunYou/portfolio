@@ -1,0 +1,44 @@
+body {
+  background-color: #e6e0ca;
+  color: #1c1c1c;
+}
+
+.darkCard {
+  background-color: #1d1d1d;
+  color: #dcdadb;
+  width: 50%;
+}
+
+#Navbar {
+  text-emphasis: bold;
+  a {
+    color: maroon;
+    font-weight: 500;
+  }
+  height: 5vh;
+}
+
+#pageTitle {
+  color: maroon;
+  font-weight: 1000;
+  font-size: xx-large;
+}
+
+#Header {
+  height: 95vh;
+  width: 100vh;
+}
+
+#Footer {
+  height: 25vh;
+  width: 100vh;
+  span {
+    color: maroon;
+    font-weight: 500;
+  }
+}
+
+.logo {
+  width: 40px; 
+  height: 40px;
+}
