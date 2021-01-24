@@ -1,17 +1,15 @@
 import React from 'react';
 import Slide from 'react-reveal/Slide';
-import Data from './Data';
+import PropTypes from 'prop-types';
 
-const MainTextCol = () => (
+const MainTextCol = ({ title, body }) => (
   <div className="row row-cols-1">
     <div className="col-12 darkCard">
       <div className="row p-5">
         <Slide left>
           <div className="col">
-            <h1> Main stuff </h1>
-            <span>
-              {Data.filler}
-            </span>
+            <h1>{title}</h1>
+            <p>{body}</p>
           </div>
         </Slide>
         <Slide right>
@@ -22,4 +20,14 @@ const MainTextCol = () => (
   </div>
 );
 
-export default () => <MainTextCol />;
+MainTextCol.propTypes = {
+  title: PropTypes.string,
+  body: PropTypes.string,
+};
+
+MainTextCol.defaultProps = {
+  title: 'Filler title',
+  body: 'Filler body',
+};
+
+export default MainTextCol;

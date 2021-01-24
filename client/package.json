@@ -12,10 +12,10 @@
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-reveal": "^1.2.2"
+    "react-reveal": "^1.2.2",
+    "react-spring": "^8.0.27"
   },
   "devDependencies": {
-    "@parcel/transformer-svg-react": "^2.0.0-nightly.1739",
     "babel-preset-nano-react-app": "^0.1.0",
     "nodemon": "^2.0.7",
     "parcel": "^2.0.0-alpha.3.2",
