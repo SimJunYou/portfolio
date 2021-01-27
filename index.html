@@ -1,0 +1,68 @@
+<html lang="en">
+  <head>
+    <title>Hello world!</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Portfolio of Sim Jun You" />
+    <meta name="author" content="Sim Jun You" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="container flex">
+    <header>
+      <div id="Navbar">
+        <div id="Nav-Left"><a>Home</a></div>
+        <div id="Nav-Title">My Portfolio</div>
+        <div id="Nav-Right">
+          <a>Projects</a>
+          <a>Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div id="IntroContainer">
+        <div id="Intro">
+          <div id="IntroText">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed
+            ex tincidunt, cursus sem a, iaculis dolor. Nulla nisi diam, tempus
+            vitae euismod ut, fringilla vel nibh. Vestibulum viverra at diam a
+            maximus. Morbi tristique mauris nec nulla tempus tempus. Aliquam sed
+            leo nec purus molestie porta vitae sit amet velit. Morbi non
+            venenatis arcu. Interdum et malesuada fames ac ante ipsum primis in
+            faucibus.
+          </div>
+          <div id="IntroPic">Pic</div>
+        </div>
+      </div>
+      <div class="Card">
+        <div class="CardText">Card 1</div>
+        <div class="CardPic">Pic 1</div>
+      </div>
+      <div class="Card">
+        <div class="CardText">Card 2</div>
+        <div class="CardPic">Pic 2</div>
+      </div>
+      <div class="Card">
+        <div class="CardText">Card 3</div>
+        <div class="CardPic">Pic 3</div>
+      </div>
+    </main>
+
+    <footer>Footer</footer>
+
+    <script>
+      window.addEventListener(
+        "scroll",
+        () => {
+          document.body.style.setProperty(
+            "--scroll",
+            window.pageYOffset /
+              (document.body.offsetHeight - window.innerHeight)
+          );
+        },
+        false
+      );
+    </script>
+  </body>
+</html>
