@@ -11,11 +11,11 @@
   <body class="container flex">
     <header>
       <div id="Navbar">
-        <div id="Nav-Left"><a>Home</a></div>
+        <div id="Nav-Left"><a class="NavLink" href="#">Home</a></div>
         <div id="Nav-Title">My Portfolio</div>
         <div id="Nav-Right">
-          <a>Projects</a>
-          <a>Contact</a>
+          <a class="NavLink" href="#">Projects</a>
+          <a class="NavLink" href="#">Contact</a>
         </div>
       </div>
     </header>
@@ -32,9 +32,10 @@
             venenatis arcu. Interdum et malesuada fames ac ante ipsum primis in
             faucibus.
           </div>
-          <div id="IntroPic">Pic</div>
+          <img src="public/me.jpg" id="IntroPic" />
         </div>
       </div>
+      <div id="Projects">Projects</div>
       <div class="Card">
         <div class="CardText">Card 1</div>
         <div class="CardPic">Pic 1</div>
@@ -49,7 +50,13 @@
       </div>
     </main>
 
-    <footer>Footer</footer>
+    <footer>
+      <div id="Footer">
+        <span>Made by Sim Jun You, 2021</span>
+        <br />
+        <span>Pure HTML, CSS, JavaScript</span>
+      </div>
+    </footer>
 
     <script>
       window.addEventListener(

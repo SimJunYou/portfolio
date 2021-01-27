@@ -1,6 +1,6 @@
 :root {
-  --dark: #1E140E;
-  --light: #F5F3F1;
+  --dark: #1c1c1c;
+  --light: #e6e0ca;
   --accent: maroon;
 }
 
@@ -13,13 +13,14 @@ body {
 
 header {
   width: 100%;
-  height: 5vh;
+  height: 10vh;
   position: sticky;
   top: 0;
   background-color: var(--dark);
   color: var(--light);
   /* border: dotted red 2px; */
   font-family: 'Arvo';
+  z-index: 5;
 }
 
 footer {
@@ -27,8 +28,9 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: 700;
   background-color: var(--light);
-  color: var(--dark);
+  color: var(--accent);
 }
 
 div {
@@ -46,7 +48,7 @@ div {
   height: 100%;
   animation: navcolor 1s ease infinite;
   animation-play-state: paused;
-  animation-delay: calc(var(--scroll) * -3s);
+  animation-delay: calc(var(--scroll) * -3.5s);
   animation-iteration-count: 1;
   animation-fill-mode: both;
 }
@@ -60,7 +62,15 @@ div {
   position: relative;
   animation: title 1s ease infinite;
   animation-play-state: paused;
-  animation-delay: calc(var(--scroll) * -3s);
+  animation-delay: calc(var(--scroll) * -3.5s);
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+a:visited {
+  animation: navcolor 1s ease infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -3.5s);
   animation-iteration-count: 1;
   animation-fill-mode: both;
 }
@@ -77,13 +87,46 @@ div {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 20rem;
+  padding-top: 15rem;
   padding-bottom: 10rem;
 }
 
 #Intro {
   display: flex;
   width: 50vw;
+  justify-content: space-between;
+}
+
+#IntroText {
+  padding-right: 5rem;
+}
+
+#IntroPic {
+  height: 50vh;
+  border-radius: 25px;
+}
+
+#Projects { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: maroon;
+  font-family: 'Arvo';
+  font-size: 50;
+}
+
+#Projects .Card .CardText .CardPic {
+  animation: projects 1s ease infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -2s);
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+#Footer {
+  display: inline;
+  text-align: center;
+  width: auto;
 }
 
 .Card {
@@ -101,18 +144,31 @@ div {
   width: 35vw;
 }
 
+.NavLink {
+  opacity: 0.7;
+  transition: opacity 0.5s;
+}
+
+.NavLink:hover {
+  opacity: 1;
+}
+
 /* ANIMATIONS - keep second last */
 
 @keyframes title {
-  from {font-size: 60; top: 20vh; color: var(--accent);}
-  to {font-size: 30; top: 0px; color: var(--light);}
+  from {font-size: 60; top: 20vh;}
+  to {font-size: 30; top: 0px;}
 }
 
 @keyframes navcolor {
-  from {color: var(--accent); background-color: var(--light);}
-  to {color: var(--light); background-color: var(--dark);}
+  from {font-size: 20; color: var(--accent); background-color: var(--light);}
+  to {font-size: 16; color: var(--light); background-color: var(--dark);}
 }
 
+@keyframes projects {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
 
 
 /* FONTS - Keep this at the bottom */
