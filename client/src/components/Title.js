@@ -22,21 +22,58 @@ DelayedFadeIn.defaultProps = {
   delayNum: 1000,
 };
 
+const MorphingTitle = () => {
+  const [scroll, setScroll] = React.useState(false);
+
+  window.onscroll = () => {
+    const pageTitle = document.getElementById('PageTitle');
+    if (window.scrollY > pageTitle.offsetTop) {
+      setScroll(true);
+      pageTitle.classList.add('scrolled');
+    } else {
+      setScroll(false);
+      pageTitle.classList.remove('scrolled');
+    }
+  };
+
+  const sizeChange = useSpring({
+    fontSize: scroll ? '10px' : '90px',
+    opacity: scroll ? 0 : 1,
+    from: { fontSize: '90px', opacity: 1 },
+    config: config.gentle,
+  });
+
+  return (
+    <a.div
+      style={sizeChange}
+      className="d-flex justify-content-center w-100"
+      id="PageTitle"
+    >
+      <span style={{ zIndex: 2 }}>{Data.title}</span>
+    </a.div>
+  );
+};
+
 export default () => (
-  <div className="row">
-    <div className="col-12 d-flex justify-content-center p-3">
+  <div className="row" id="HeaderContainer">
+    <div className="col-12 d-flex justify-content-center p-3" style={{ zIndex: 2 }}>
       <DelayedFadeIn delayNum={0}>
-        <span id="pageTitle">My Portfolio</span>
+        <MorphingTitle />
       </DelayedFadeIn>
     </div>
-    <div className="col-7">
+    <div className="col col-sm-7">
       <DelayedFadeIn delayNum={500}>
-        <span>{Data.titleLeft}</span>
+        <span>{Data.formatText(Data.titleLeft)}</span>
       </DelayedFadeIn>
     </div>
-    <div className="col-5">
+    <div className="col col-sm-5">
       <DelayedFadeIn delayNum={1000}>
-        <img src="/me.jpg" alt="Me" className="border rounded" id="me" />
+        <img
+          src="/me.jpg"
+          alt="Me"
+          className="border rounded img-fluid"
+          id="me"
+        />
       </DelayedFadeIn>
     </div>
   </div>

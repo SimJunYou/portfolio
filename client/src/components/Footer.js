@@ -7,18 +7,24 @@ export default () => (
         Made by Sim Jun You, 2021
         <br />
         <div className="pt-3">
-          <img className="logo" src="/react-logo.svg" alt="React" />
-          <span className="p-2">🞠</span>
           <img
-            className="logo"
-            style={{ height: '55px', width: '55px' }}
+            style={{ height: '40px', width: '40px' }}
+            src="/react-logo.svg"
+            alt="React"
+          />
+          <img
+            className="p-2"
+            style={{ height: '60px', width: '60px' }}
             src="/bootstrap-logo.svg"
             alt="Bootstrap"
           />
-          <span className="p-2">🞠</span>
           <img
-            className="logo"
-            style={{ position: 'relative', top: '-1px' }}
+            style={{
+              height: '45px',
+              width: '45px',
+              position: 'relative',
+              top: '-1px',
+            }}
             src="/koa-logo.svg"
             alt="Koa"
           />
