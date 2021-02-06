@@ -9,18 +9,25 @@ body {
   padding: 0;
   background-color: var(--light);
   font-family: 'Open Sans';
+  scroll-behavior: smooth;
+}
+
+figcaption {
+  text-align: center;
+  color:#5c5c5c;
+  font-style: italic;
 }
 
 header {
   width: 100%;
   height: 10vh;
   position: sticky;
+  z-index: 1;
   top: 0;
   background-color: var(--dark);
   color: var(--light);
   /* border: dotted red 2px; */
   font-family: 'Arvo';
-  z-index: 5;
 }
 
 footer {
@@ -51,13 +58,18 @@ div {
   animation-delay: calc(var(--scroll) * -3.5s);
   animation-iteration-count: 1;
   animation-fill-mode: both;
+  z-index: 1;
 }
 
-#Navbar #Nav-Left {
+#Nav-Left {
   text-align: left;
 }
 
-#Navbar #Nav-Title {
+#Nav-Right {
+  text-align: right;
+}
+
+#Nav-Title {
   text-align: center;
   position: relative;
   animation: title 1s ease infinite;
@@ -73,10 +85,6 @@ a:visited {
   animation-delay: calc(var(--scroll) * -3.5s);
   animation-iteration-count: 1;
   animation-fill-mode: both;
-}
-
-#Navbar #Nav-Right {
-  text-align: right;
 }
 
 #Navbar #Nav-Right > * {
@@ -106,13 +114,27 @@ a:visited {
   border-radius: 25px;
 }
 
-#Projects { 
+#Content {
   display: flex;
   justify-content: center;
+  flex-flow: row wrap
+}
+
+#Projects { 
+  display: flex;
+  position: sticky;
+  top: 0px;
+  height: 10vh;
+  width: auto;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  z-index: 2;
+  justify-content: center;
   align-items: center;
-  color: maroon;
+  color: var(--light);
   font-family: 'Arvo';
-  font-size: 50;
+  font-size: 40;
+  background-color: var(--dark);
 }
 
 #Projects .Card .CardText .CardPic {
@@ -131,9 +153,23 @@ a:visited {
 
 .Card {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  height: 40vh;
+  flex-wrap: wrap;
+  height: auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  /* border-bottom: 1px dotted var(--accent); */
+}
+
+.CardTitle {
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: var(--accent);
+  font-family: 'Arvo';
+  font-size: 30;
 }
 
 .CardText {
@@ -142,11 +178,32 @@ a:visited {
 
 .CardPic {
   width: 35vw;
+  height: auto;
+}
+
+.CardVidContainer {
+  position: relative;
+  overflow: hidden;
+  width: 35vw;
+  padding-top: 20%;
+  border: 1px blue dotted;
+}
+
+.ResponsiveIFrame {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .NavLink {
   opacity: 0.7;
   transition: opacity 0.5s;
+  z-index: 3;
 }
 
 .NavLink:hover {
@@ -157,7 +214,7 @@ a:visited {
 
 @keyframes title {
   from {font-size: 60; top: 20vh;}
-  to {font-size: 30; top: 0px;}
+  to {font-size: 40; top: 0px;}
 }
 
 @keyframes navcolor {

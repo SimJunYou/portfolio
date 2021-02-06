@@ -10,7 +10,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "dev": "./node_modules/.bin/parcel index.html"
+    "dev": "./node_modules/.bin/parcel index.html projects.html"
   },
   "repository": {
     "type": "git",
