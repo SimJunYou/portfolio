@@ -1,16 +1,11 @@
 {
   "name": "portfolio",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "dependencies": {},
-  "devDependencies": {
-    "parcel": "^1.12.4"
-  },
+  "version": "1.1.0",
+  "description": "A basic website, hosted on Netlify",
+  "default": "dist\\index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "dev": "./node_modules/.bin/parcel index.html projects.html"
+    "start": "parcel build index.html --public-url ./",
+    "dev": "parcel index.html"
   },
   "repository": {
     "type": "git",
@@ -21,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/f0fz/portfolio/issues"
   },
-  "homepage": "https://github.com/f0fz/portfolio#readme"
+  "homepage": "https://github.com/f0fz/portfolio#readme",
+  "dependencies": {
+
+  },
+  "devDependencies": {}
 }
