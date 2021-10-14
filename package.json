@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/f0fz/portfolio#readme",
   "dependencies": {
-
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "parcel": "^2.0.0"
+  }
 }
