@@ -15,6 +15,15 @@ body {
   background-color: var(--light);
   font-family: "Open Sans";
   scroll-behavior: smooth;
+  position: relative;
+}
+
+.MainContainer {
+  min-height: 100vh;
+}
+
+main {
+  padding-bottom: 2.5rem; 
 }
 
 header {
@@ -30,12 +39,27 @@ header {
 }
 
 footer {
-  height: 30vh;
+  position: absolute;
+  bottom: 0;
+  height: 10vh;
+  width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
   font-weight: 700;
   background-color: var(--light);
+  color: var(--accent);
+}
+
+#Footer {
+  display: inline;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  white-space: normal;
+}
+
+.BackButton {
+  text-decoration: underline;
   color: var(--accent);
 }
 
@@ -92,6 +116,7 @@ figcaption {
   animation-delay: calc(var(--scroll) * -8s);
   animation-iteration-count: 1;
   animation-fill-mode: both;
+  white-space: nowrap;
 }
 
 #Navbar #Nav-Right > * {
@@ -102,6 +127,9 @@ figcaption {
   opacity: 0.7;
   transition: opacity 0.5s;
   z-index: 3;
+}
+
+.NavLink, .NavTitle > a {
   text-decoration: none;
   color: inherit;
 }
@@ -116,21 +144,24 @@ figcaption {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 15rem;
+  padding-top: 5rem;
 }
 
 #Intro {
   display: flex;
   width: 50vw;
   justify-content: space-between;
+  min-width: 768px;
 }
 
 #IntroText {
-  padding-left: 5rem;
+  padding-left: 3vw;
 }
 
 #IntroPic {
-  height: 50vh;
+  max-height: 50vh;
+  height: 100%;
+  width: 30vw;
   border-radius: 25px;
   box-shadow: 3px 3px 3px grey;
 }
@@ -164,12 +195,6 @@ figcaption {
   font-size: 40;
 }
 
-#Footer {
-  display: inline;
-  text-align: center;
-  width: auto;
-}
-
 .Card {
   display: flex;
   justify-content: space-evenly;
@@ -180,8 +205,8 @@ figcaption {
   background-color: var(--card);
   padding-top: 2rem;
   padding-bottom: 2rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   /* border-bottom: 1px dotted var(--accent); */
@@ -232,36 +257,53 @@ figcaption {
 
 #TierContainer {
   width: 100%;
-  padding: 2rem;
+  padding-top: 2rem;
 }
 
 #TierBoard {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 1rem;
   margin: auto;
+  min-width: 800px;
   width: 40vw;
-  height: 50vh;
-  background-color: var(--dark);
+  height: auto;
+  background-color: var(--card);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  /* border-bottom: 1px dotted var(--accent); */
+}
+
+#TierBoard:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .TierRow {
   display: flex;
+  margin: 1rem;
   width: 100%;
   height: 85px;
+}
+  
+.TierLabelContainer {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%
 }
 
 .TierLabel {
   display: flex;
   justify-content: center;
+  box-sizing: border-box;
   align-items: center;
   border-radius: 5px;
   height: 100%;
-  width: 15%;
+  width: 25%;
   font-size: 30;
   font-weight: 700;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .TierDesc {
@@ -270,10 +312,11 @@ figcaption {
   align-items: center;
   border-radius: 5px;
   margin-left: 1rem;
-  width: 30%;
+  width: 75%;
   height: 85px;
   background-color: rgb(56, 56, 56);
   color: var(--light);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .TierDescText {
@@ -289,6 +332,7 @@ figcaption {
   width: 80%;
   height: 85px;
   background-color: rgb(56, 56, 56);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .TierIconHolder {
@@ -307,14 +351,21 @@ figcaption {
 .TierIconDesc {
   color: white;
   font-family: "Arvo";
+  white-space: nowrap;
+  position: relative;
+  bottom: -50%;
   visibility: hidden;
   padding-left: 0;
   width: 0;
+  opacity: 0%;
+  transition: padding-left 0.3s, opacity 0.5s, width 0.5s;
 }
 
 .TierIconHolder:hover .TierIconDesc {
   visibility: visible;
+  bottom: 0;
   width: auto;
+  opacity: 100%;
   padding-left: 1rem;
 }
 
@@ -323,7 +374,7 @@ figcaption {
 @keyframes title {
   from {
     font-size: 60;
-    top: 20vh;
+    top: 1rem;
   }
   to {
     font-size: 40;

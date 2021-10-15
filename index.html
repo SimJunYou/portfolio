@@ -1,311 +1,70 @@
 <html lang="en">
+  <head>
+    <title>Sim Jun You</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Sim Jun You's Portfolio" />
+    <meta name="author" content="Sim Jun You" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="styles.css" />
+    <link type="text/css" rel="stylesheet" href="queries.css" />
+  </head>
 
-<head>
-  <title>Hello world!</title>
-  <meta charset="UTF-8" />
-  <meta name="description" content="Portfolio of Sim Jun You" />
-  <meta name="author" content="Sim Jun You" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link type="text/css" rel="stylesheet" href="styles.css" />
-  <link type="text/css" rel="stylesheet" href="queries.css" />
-</head>
-
-<body class="container flex">
-  <header>
-    <div id="Navbar">
-      <div id="Nav-Left">
-        <a href="/about.html" class="NavLink">Sim Jun You</a>
-      </div>
-      <div class="NavTitle">My Portfolio</div>
-      <div id="Nav-Right">
-        <a class="NavLink">simjunyou@u.nus.edu</a>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <div id="IntroContainer">
-      <div id="Intro">
-        <img src="public/me.jpg" id="IntroPic" />
-        <div id="IntroText">
-          <b>Welcome! I'm Jun You, a 3rd year Computer Engineering student at
-            NUS.</b>
-          I built this website from scratch to learn more about web
-          development. It's a static site made using pure HTML, CSS, and a
-          little JavaScript. This is the second iteration of this site, after
-          I made the first one with React, Bootstrap, and Koa. It has some
-          rudimentary responsive design, so it should read well on phones too.
-          I'm not really aiming to be a web developer.
-          <br />
-          <br />
-          <b>I like to learn stuff and apply them.</b> I've learned Python, C,
-          C++, Java, and JavaScript so far, but I mainly use Python. I am
-          proficient at Pandas, SQL, VBA, and Excel/Power BI's Power Query. I
-          read documentation and Google is my best friend. I know my way
-          around the command line. I use Linux (Manjaro) sometimes. I may not
-          have any experience in professional software engineering, but I
-          understand the general workflow from version control to code
-          reviews.
-          <br />
-          <br />
-          <b>I like to write and build things that make my life easier.</b>
-          I've built a smart mirror with a Raspberry Pi and an old TV, wrote a
-          Telegram + Twitter bot to fetch me tweets from trading experts, and
-          automated tons of work on Excel with Python, VBA, and Power Query. I
-          try not to spend more time automating things than actually doing
-          them.
-
-          <br />
-          <br />
-          Check out my skills and projects below! You can also find my resume down below.
+  <body>
+    <div class="MainContainer">
+      <header>
+        <div id="Navbar">
+          <div id="Nav-Left">
+            <span class="NavLink">
+              <a href="/about.html" class="NavLink">About me</a>
+            </span>
+          </div>
+          <div class="NavTitle"><a href="/">My Portfolio</a></div>
+          <div id="Nav-Right">
+            <a class="NavLink">
+              <a href="/skills.html" class="NavLink">Skills</a>
+            </a>
+            <a class="NavLink">
+              <a href="/projects.html" class="NavLink">Projects</a>
+            </a>
+          </div>
         </div>
-      </div>
-    </div>
-    <div id="Content">
-      <div class="SectionBox">
-        <span class="SectionTitle"> Skills </span>
-      </div>
-      <div id="TierContainer">
-        <div id="TierBoard">
-          <div class="TierRow">
-            <div class="TierLabel" style="background-color:#44D492">A</div>
-            <div class="TierDesc">
-              <div class="TierDescText">I pretty much these know by heart.</div>
-            </div>
-            <div class="TierStuff">
-              <div class="TierIconHolder">
-                <img src="public/python.svg" class="TierIcon" alt="Python" />
-                <p class="TierIconDesc">Python 3</p>
-              </div>
-              <div class="TierIconHolder">
-                <img src="public/excel.svg" class="TierIcon" alt="Excel" />
-                <p class="TierIconDesc">Excel, VBA, PowerQuery</p>
-              </div>
-            </div>
-          </div>
-          <div class="TierRow">
-            <div class="TierLabel" style="background-color:#F5EB67"">B</div>
-              <div class=" TierDesc">
-              <div class="TierDescText">Stuff I understand and can build well.</div>
-            </div>
-            <div class="TierStuff">
-              <div class="TierIconHolder">
-                <img src="public/pandas.svg" class="TierIcon" alt="Pandas" />
-                <p class="TierIconDesc">Pandas</p>
-              </div>
-              <div class="TierIconHolder">
-                <img src="public/java.svg" class="TierIcon" alt="Java" />
-                <p class="TierIconDesc">Java</p>
-              </div>
-              <div class="TierIconHolder">
-                <img src="public/postgresql.svg" class="TierIcon" alt="PostgreSQL" />
-                <p class="TierIconDesc">SQL (PostgreSQL)</p>
-              </div>
-            </div>
-          </div>
-          <div class="TierRow">
-            <div class="TierLabel" style="background-color:#FFA15C"">C</div>
-              <div class=" TierDesc">
-              <div class="TierDescText">Can get by with lots of Googling.</div>
-            </div>
-            <div class="TierStuff">
-              <div class="TierIconHolder">
-                <img src="public/html5.svg" class="TierIcon" alt="HTML5" />
-                <p class="TierIconDesc">HTML5</p>
-              </div>
-              <div class="TierIconHolder">
-                <img src="public/css3.svg" class="TierIcon" alt="CSS3" />
-                <p class="TierIconDesc">CSS3</p>
-              </div>
-              <div class="TierIconHolder">
-                <img src="public/javascript.svg" class="TierIcon" alt="JavaScript" />
-                <p class="TierIconDesc">JavaScript</p>
-              </div>
+      </header>
 
-            </div>
-          </div>
-          <div class="TierRow">
-            <div class="TierLabel" style="background-color:#FA233E"">D</div>
-              <div class=" TierDesc">
-              <div class="TierDescText">Rusty and out of practice.</div>
-            </div>
-            <div class="TierStuff">
-              <div class="TierIconHolder">
-                <img src="public/c.svg" class="TierIcon" alt="C" />
-                <p class="TierIconDesc">C</p>
-              </div>
-              <div class="TierIconHolder">
-                <img src="public/c++.svg" class="TierIcon" alt="C++" />
-                <p class="TierIconDesc">C++</p>
-              </div>
+      <main>
+        <div id="Content">
+          <div class="Card">
+            <div class="CardText">
+              <div class="CardTitle">Welcome!</div>
+              I'm Sim Jun You, and this is my portfolio. It's quite sparse now,
+              but I plan to fill it up with more details and maybe detailed
+              posts about my projects.
+              <br />
+              <br />
+              In the meantime, do take a look around! Find out more
+              <a href="about.html">about me</a>, or
+              <a href="skills.html">what I'm good at</a>. You can also take a
+              look at <a href="projects.html">my projects</a>.
             </div>
           </div>
         </div>
-      </div>
+      </main>
 
-      <div class="SectionBox">
-        <span class="SectionTitle"> Projects </span>
-      </div>
-      <div class="Card">
-        <div class="CardText">
-          <div class="CardTitle">Portfolio Website</div>
-          My first attempt at a portfolio website was made with React, with a
-          super minimal backend in Koa (which I later I realised I didn't need
-          for a static site). There was lots of Bootstrap involved for stuff
-          that I didn't realise I could do with simple CSS too. I added nice
-          animations with react-spring and react-reveal. But as I worked, I
-          realised that the whole website was pretty bloated by a single-page
-          static site standard.
-          <br />
-          <br />
-          I'm not really a HTML/CSS purist, but I prefer to avoid using libraries where
-          I can to stay as close to barebones as possible. Also, I actually jumped straight into React/Koa without much
-          practice in the fundamentals of HTML and CSS. I read some tutorials
-          and found that I could be making the same website with no frameworks
-          or JS libraries whatsoever.
-          <br />
-          <br />
-          What you're seeing now is my pure HTML/CSS/JS website with no
-          extraneous libraries or frameworks. I know it's not the prettiest
-          and I'm not sure if I've followed best practice, but it's been great
-          practice for HTML/CSS fundamentals and beyond.
-          <br />
-          <br />
-          <strong>Links: </strong>
-          <a href="https://github.com/f0fz/portfolio/tree/pure-html-css">GitHub repo</a>.
+      <footer>
+        <div id="Footer">
+          <span>Made by Sim Jun You, 2021</span><br/>
         </div>
-        <figure>
-          <img class="CardPic" src="public/website.jpg" />
-          <figcaption>The barebones beginnings of this website.</figcaption>
-        </figure>
-      </div>
-      <hr />
-      <div class="Card">
-        <div class="CardText">
-          <div class="CardTitle">WallStweetBot</div>
-          After learning Python, I got hooked on making Telegram bots. The
-          first few I made were for simple stuff like downloading Youtube
-          videos and keeping todo lists, but as I got more comfortable with
-          the API I started trying more complicated projects.
-          <br />
-          <br />
-          This is the bot that I use the most in my day-to-day life. It
-          provides me with finance/investment related tweets from a select
-          group of investment-related Twitter users. It provides a live feed
-          in whatever group it is started in, and there are some commands to
-          do some specific tweet scrapes, like for stock recommendations and
-          so on.
-          <br />
-          <br />
-          The bot is hosted on Heroku with a hobby dyno so it runs
-          permanently, so it just feeds me and my friends with sketchy
-          investment advice every now and then. This was an interesting
-          project involving the Twitter API which I'd never used before and
-          also a foray into the multitasking aspect of Python (using the
-          threading library).
-          <br />
-          <br />
-          <strong>Links: </strong>
-          <a href="https://github.com/f0fz/TwitterStockBot">GitHub repo</a>,
-          <a href="https://github.com/python-telegram-bot/python-telegram-bot">Telegram Bot API</a>,
-          <a href="https://github.com/bear/python-twitter">Twitter Bot API</a>.
-        </div>
-        <figure>
-          <img class="CardPic" src="public/wallstweetbot.jpg" />
-          <figcaption>
-            Check it out yourself at @WallStweetBot on Telegram!
-          </figcaption>
-        </figure>
-      </div>
-      <hr />
-      <div class="Card">
-        <div class="CardText">
-          <div class="CardTitle">Alex</div>
-          Alex is a LIDAR enabled remote controlled car. Whatever the LIDAR
-          sees is transmitted back to the remote controller and mapped. There
-          are a 3 machines involved: The Raspberry Pi, the Arduino, and the
-          client's computer.
-          <br />
-          <br />
-          This one's a school project, but I'm pretty proud of how my group
-          put it together. This was my first venture into combining different
-          programs across different machines into one cohesive and fluid user
-          experience. I learned a lot about shell scripting in the process. I
-          can't claim that it was entirely my work, but I did write all the
-          shell scripts that you see in the video.
-          <br />
-          <br />
-          I would say this was the project that pushed me to try more
-          complicated projects like those you see above as well as some other
-          multi-machine/API projects. I'm definitely going to continue
-          pursuing similar projects in the future - possibly Smart Home IOT
-          related?
-          <br />
-          <br />
-          <strong>Links: </strong>
-          <a href="https://github.com/daniellimzj/EPP_Project">GitHub repo</a>.
-        </div>
-        <figure class="CardVidContainer">
-          <iframe class="ResponsiveIFrame" src="https://www.youtube.com/embed/hUoLTi8OOZo">
-          </iframe>
-        </figure>
-      </div>
-      <hr />
-      <div class="Card">
-        <div class="CardText">
-          <div class="CardTitle">ra.VI</div>
-          ra.VI (Repository Assistant with a Versatile Interface) is another
-          school project from a software engineering module. It's a CLI
-          personal assistant written in Java designed to help students manage
-          tasks, todos, and their timetable faster than traditional GUI apps.
-          <br />
-          <br />
-          This was my first real large-scale project with a group of people,
-          and it was a rough journey. I learned about version control,
-          continuous integration, code style enforcement, unit and integration
-          testing, and user and developer documentation.
-          <br />
-          <br />
-          The programming side of this project is nothing to write home about.
-          (It was actually pretty buggy even at the final release.) However,
-          now I can confidently say that I have a basic grasp of the general
-          workflow of a software engineering team, and that I can manage
-          myself in such an environment.
-          <br />
-          <br />
-          <strong>Links: </strong>
-          <a href="https://github.com/AY2021S1-CS2113T-T09-2/tp">GitHub repo</a>,
-          <a href="https://ay2021s1-cs2113t-t09-2.github.io/tp/">User & Developer Docs</a>.
-        </div>
-        <figure>
-          <img class="CardPic" src="public/ravi.png" />
-          <figcaption>A screencap of ra.VI's startup page</figcaption>
-        </figure>
-      </div>
+      </footer>
     </div>
-  </main>
 
-  <footer>
-    <div id="Footer">
-      <span>Made by Sim Jun You, 2021</span>
-      <br />
-      <br />
-    </div>
-  </footer>
-
-  <script>
-    function updateScrollHeight() {
-      document.body.style.setProperty(
-        "--scroll",
-        window.pageYOffset /
-        (document.body.offsetHeight - window.innerHeight)
-      );
-    }
-    updateScrollHeight();
-    window.addEventListener(
-      "scroll", updateScrollHeight, false
-    );
-  </script>
-</body>
-
+    <script>
+      function updateScrollHeight() {
+        document.body.style.setProperty(
+          "--scroll",
+          window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
+        );
+      }
+      updateScrollHeight();
+      window.addEventListener("scroll", updateScrollHeight, false);
+    </script>
+  </body>
 </html>

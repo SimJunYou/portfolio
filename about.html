@@ -1,25 +1,81 @@
 <html lang="en">
 
 <head>
-  <title>Hello world!</title>
+  <title>About Me</title>
   <meta charset="UTF-8" />
-  <meta name="description" content="Portfolio of Sim Jun You" />
+  <meta name="description" content="Sim Jun You's Portfolio" />
   <meta name="author" content="Sim Jun You" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link type="text/css" rel="stylesheet" href="styles.css" />
   <link type="text/css" rel="stylesheet" href="queries.css" />
 </head>
 
-<body class="container flex">
-  <header>
-    <div id="Navbar">
-      <div id="Nav-Left">
-        <span class="NavLink">Sim Jun You</span>
+<body>
+  <div class="MainContainer">
+    <header>
+      <div id="Navbar">
+        <div id="Nav-Left">
+          <span class="NavLink">
+            <a href="/about.html" class="NavLink">About me</a>
+          </span>
+        </div>
+        <div class="NavTitle"><a href="/">Who am I?</a></div>
+        <div id="Nav-Right">
+          <a class="NavLink">
+            <a href="/skills.html" class="NavLink">Skills</a>
+          </a>
+          <a class="NavLink">
+            <a href="/projects.html" class="NavLink">Projects</a>
+          </a>
+        </div>
       </div>
-      <div class="NavTitle">My Portfolio</div>
-      <div id="Nav-Right">
-        <a class="NavLink">simjunyou@u.nus.edu</a>
+    </header>
+
+    <main>
+      <div id="IntroContainer">
+        <div id="Intro">
+          <img src="public/me.jpg" id="IntroPic" />
+          <div id="IntroText">
+            <b>Hi! I'm Jun You, a 3rd year Computer Engineering student at
+              NUS.</b>
+            I built this website from scratch to learn more about web
+            development. It's a static site made using pure HTML, CSS, and a
+            little JavaScript. This is the second iteration of this site, after
+            I made the first one with React, Bootstrap, and Koa. It has some
+            rudimentary responsive design, so it should read well on phones too.
+            I'm not really aiming to be a web developer anyways.
+            <br />
+            <br />
+            <b>I like to learn stuff and apply them.</b> I've learned Python, C,
+            C++, Java, and JavaScript so far, but I mainly use Python. I am
+            proficient at Pandas, SQL, VBA, and Excel/Power BI's Power Query. I
+            read documentation and Google is my best friend. I know my way
+            around the command line. I use Linux (Manjaro) sometimes. I may not
+            have any experience in professional software engineering, but I
+            understand the general workflow from version control to code
+            reviews.
+            <br />
+            <br />
+            <b>I like to write and build things that make my life easier.</b>
+            I've built a smart mirror with a Raspberry Pi and an old TV, wrote a
+            Telegram + Twitter bot to fetch me tweets from trading experts, and
+            automated tons of work on Excel with Python, VBA, and Power Query. I
+            try not to spend more time automating things than actually doing
+            them.
+
+            <br />
+            <br />
+            Check out my <a href="/skills.html">skills</a> and <a href="projects.html">projects!</a>
+          </div>
+        </div>
       </div>
-    </div>
-  </header>
+    </main>
+
+    <footer>
+      <div id="Footer">
+        <span>Made by Sim Jun You, 2021</span><br/>
+        <a class="BackButton" href="index.html">Back to main?</a>
+      </div>
+    </footer>
+  </div>
 </body>
