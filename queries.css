@@ -8,6 +8,10 @@
 }
 
 @media all and (max-width: 480px) {
+  html {
+    font-size: calc(60% + 1vmin);
+  }
+
   hr {
     width: 20%;
   }
@@ -17,7 +21,7 @@
   }
 
   #IntroContainer {
-    padding-top: 5rem;
+    padding-top: 2rem;
   }
 
   #Intro {
@@ -28,7 +32,8 @@
   }
 
   #IntroText {
-    padding-left: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
     padding-top: 2rem;
   }
 
@@ -59,30 +64,27 @@
     padding-top: 20%;
   }
 
-  @keyframes title {
-    from {
-      font-size: calc(60% + 5vmin);
-      top: 5vh;
-    }
-    to {
-      font-size: calc(60% + 5vmin);
-      top: 0px;
-    }
+  #Navbar {
+    animation: none;
+    font-size: 16;
+    color: var(--light);
+    background-color: var(--dark);
+    /* animation: navcolor 1s ease infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -18s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both; */
   }
 
-  #Navbar {
-    animation: navcolor 1s ease infinite;
-    animation-play-state: paused;
-    animation-delay: calc(var(--scroll) * -18s);
-    animation-iteration-count: 1;
-    animation-fill-mode: both;
-  }
   .NavTitle {
-    animation: title 1s ease infinite;
+    font-size: calc(60% + 5vmin);
+    top: 0px;
+    animation: none;
+    /* animation: title 1s ease infinite;
     animation-play-state: paused;
     animation-delay: calc(var(--scroll) * -18s);
     animation-iteration-count: 1;
-    animation-fill-mode: both;
+    animation-fill-mode: both; */
   }
 
   #Nav-Left,
@@ -96,4 +98,15 @@
   .SectionBox {
     margin-top: 5rem;
   }
+/* 
+  @keyframes title {
+    from {
+      font-size: calc(60% + 5vmin);
+      top: 5vh;
+    }
+    to {
+      font-size: calc(60% + 5vmin);
+      top: 0px;
+    }
+  } */
 }
