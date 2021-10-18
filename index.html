@@ -1,63 +1,218 @@
 <html lang="en">
   <head>
-    <title>Sim Jun You</title>
+    <title>About Me</title>
     <meta charset="UTF-8" />
     <meta name="description" content="Sim Jun You's Portfolio" />
     <meta name="author" content="Sim Jun You" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link type="text/css" rel="stylesheet" href="styles.css" />
-    <link type="text/css" rel="stylesheet" href="queries.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Nunito+Sans:ital,wght@0,200;0,400;0,700;1,400&display=swap");
+    </style>
+    <script
+      src="https://kit.fontawesome.com/fceeb86302.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
-
   <body>
-    <div class="MainContainer">
-      <header>
-        <div id="Navbar">
-          <div id="Nav-Left">
-            <span class="NavLink">
-              <a href="/about.html" class="NavLink">About me</a>
-            </span>
-          </div>
-          <div class="NavTitle"><a href="/">My Portfolio</a></div>
-          <div id="Nav-Right">
-            <a class="NavLink">
-              <a href="/skills.html" class="NavLink">Skills</a>
-            </a>
-            <a class="NavLink">
-              <a href="/projects.html" class="NavLink">Projects</a>
-            </a>
-          </div>
-        </div>
-      </header>
+    <svg
+      class="background"
+      id="demo"
+      viewBox="0 0 100 100"
+      preserveAspectRatio="none"
+    >
+      <path
+        fill="#FFFCF2"
+        fill-opacity="0.6"
+        d="M-100 -100L200 -100L200 20L-100 20Z"
+        style="animation: path0 40s linear infinite alternate"
+      />
+      <path
+        fill="#EB5E28"
+        fill-opacity="0.8"
+        d="M-100 -100L200 -100L200 20L-100 20Z"
+        style="animation: path1 20s linear infinite alternate"
+      />
+    </svg>
+    <div id="Header" class="flex-container">
+      <img id="MainPic" src="public/me3.jpg" />
+      <div id="MainTitle">
+        <h1>Welcome!</h1>
+        <h2>
+          I'm <b>Jun You</b>, and I'm a third year <br />
+          <b>Computer Engineering</b> student in NUS.
+        </h2>
+      </div>
+      <div id="ButtonContainer">
+        <button
+          class="angled-gradient-button"
+          onclick="scrollDownTo('AboutSection');"
+        >
+          About
+        </button>
+        <button
+          class="angled-gradient-button"
+          onclick="scrollDownTo('SkillsSection');"
+        >
+          Skills
+        </button>
+        <button class="angled-gradient-button">Projects</button>
+      </div>
+    </div>
+    <div id="AboutSection" class="flex-container">
+      <div class="section-head"><h1>About Me</h1></div>
 
-      <main>
-        <div id="Content">
-          <div class="Card">
-            <div class="CardText">
-              <div class="CardTitle">Welcome!</div>
-              I'm Sim Jun You, and this is my portfolio. It's quite sparse now,
-              but I plan to fill it up with more details and maybe detailed
-              posts about my projects.
-              <br />
-              <br />
-              In the meantime, do take a look around! Find out more
-              <a href="about.html">about me</a>, or
-              <a href="skills.html">what I'm good at</a>. You can also take a
-              look at <a href="projects.html">my projects</a>.
-            </div>
-          </div>
+      <div id="AboutText" class="body-text">
+        <strong id="FirstSentence"
+          >Hi! My name is Jun You, and I like building things.</strong
+        >
+        <br />
+        <br />
+        I built this website from scratch to learn more about web development.
+        It's a static site made using pure HTML, CSS, and a little JavaScript.
+        This is actually the second iteration of the site, after my first
+        attempt in React and Bootstrap. It's been a lot more fun than I
+        initially thought it would be!
+        <br />
+        <br />
+        <strong>I like to learn stuff and apply them.</strong> I've learned
+        <b>Python, C, C++, Java, and JavaScript</b> so far, but I mainly use
+        Python. I am proficient at
+        <b>Pandas, SQL, VBA, and Excel/Power BI's Power Query</b>. When I don't
+        know things, I read documentation and I Google a lot. I know my way
+        around the command line and have experience using Linux. I may not have
+        any experience in professional software engineering, but I understand
+        the general workflow from version control to code reviews.
+        <br />
+        <br />
+        <strong
+          >I like to write and build things that make my life easier.</strong
+        >
+        I've built a smart mirror with a <b>Raspberry Pi</b> and an old TV,
+        wrote a <b>Telegram + Twitter bot</b> to fetch me tweets from trading
+        experts, and automated tons of work on Excel with
+        <b>Python, VBA, and Power Query</b>. I try not to spend more time
+        automating things than actually doing them.
+        <br />
+        <br />
+        If you want to take a <b>deeper look</b> at my projects, here's my
+        <div class="link">
+          <a href="https://github.com/SimJunYou">Github!</a>
         </div>
-      </main>
+        <br />
+        <br />
+        <b>For interested recruiters</b>, click here to download my
+        <div class="link">
+          <a href="public/SimJunYou-Resume.pdf" download="SimJunYou-Resume.pdf"
+            >resume.</a
+          >
+        </div>
+      </div>
+    </div>
+    <div id="SkillsSection" class="flex-container">
+      <div class="section-head"><h1>My Skills</h1></div>
+      <div class="body-text">
+        After various projects and university modules, here's what I know so
+        far. This isn't in order of proficiency, but rather what I tend to use
+        each one for and how often I use them.
+        <br />
+        <br />
+        Hover over/touch the icons below!
+      </div>
 
-      <footer>
-        <div id="Footer">
-          <span>Made by Sim Jun You, 2021</span><br/>
+      <div class="tier-section-head">
+        Things that I use for pretty much everything.
+      </div>
+      <div class="tier-row">
+        <div class="tier-icon-holder">
+          <img src="public/python.svg" class="tier-icon" alt="Python" />
+          <p class="tier-icon-desc">
+            <b>Python 3</b><br />For literally anything.
+          </p>
         </div>
-      </footer>
+      </div>
+
+      <div class="tier-section-head">Things I use for my own projects.</div>
+      <div class="tier-row">
+        <div class="tier-icon-holder">
+          <img src="public/pandas.svg" class="tier-icon" alt="Pandas" />
+          <p class="tier-icon-desc"><b>Pandas</b><br />For data analysis.</p>
+        </div>
+        <div class="tier-icon-holder">
+          <img src="public/c.svg" class="tier-icon" alt="C" />
+          <p class="tier-icon-desc"><b>C</b><br />For SPEED.</p>
+        </div>
+        <div class="tier-icon-holder">
+          <img
+            src="public/telegram.svg"
+            class="tier-icon"
+            alt="Telegram bots"
+          />
+          <p class="tier-icon-desc">
+            <b>Telegram bots</b><br />For interactive stuff.
+          </p>
+        </div>
+      </div>
+
+      <div class="tier-section-head">Things I can Google and build well.</div>
+      <div class="tier-row">
+        <div class="tier-icon-holder">
+          <img src="public/java.svg" class="tier-icon" alt="Java" />
+          <p class="tier-icon-desc"><b>Java</b><br />From school.</p>
+        </div>
+        <div class="tier-icon-holder">
+          <img src="public/postgresql.svg" class="tier-icon" alt="PostgreSQL" />
+          <p class="tier-icon-desc"><b>PostgreSQL</b><br />My go-to RDBMS.</p>
+        </div>
+        <div class="tier-icon-holder">
+          <img src="public/excel.svg" class="tier-icon" alt="Excel" />
+          <p class="tier-icon-desc"><b>VBA/PowerQuery</b><br />For Excel.</p>
+        </div>
+      </div>
+
+      <div class="tier-section-head">
+        Things I've learned from making this website.
+      </div>
+      <div class="tier-row">
+        <div class="tier-icon-holder">
+          <img src="public/html5.svg" class="tier-icon" alt="HTML5" />
+          <p class="tier-icon-desc"><b>HTML5</b></p>
+        </div>
+        <div class="tier-icon-holder">
+          <img src="public/css3.svg" class="tier-icon" alt="CSS3" />
+          <p class="tier-icon-desc"><b>CSS5</b></p>
+        </div>
+        <div class="tier-icon-holder">
+          <img src="public/javascript.svg" class="tier-icon" alt="JavaScript" />
+          <p class="tier-icon-desc"><b>JavaScript</b></p>
+        </div>
+      </div>
+    </div>
+
+    <div id="ProjectsSection" class="flex-container">
+      <div class="section-head"><h1>My Projects</h1></div>
+
+      <div id="ProjectsText" class="body-text">
+        This part's a work-in-progress :)
+      </div>
+    </div>
+    <div id="ScrollIndicator">
+      <i class="fas fa-chevron-down"></i>
+      <i class="fas fa-chevron-down"></i>
+      <i class="fas fa-chevron-down"></i>
     </div>
 
     <script>
+      let hasScrolled = false;
       function updateScrollHeight() {
+        let scrollVar =
+          window.pageYOffset /
+          (document.body.offsetHeight - window.innerHeight);
+        if (scrollVar > 0.5 && !hasScrolled) {
+          hasScrolled = true;
+        } else if (hasScrolled) {
+          return;
+        }
         document.body.style.setProperty(
           "--scroll",
           window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
@@ -65,6 +220,13 @@
       }
       updateScrollHeight();
       window.addEventListener("scroll", updateScrollHeight, false);
+
+      function scrollDownTo(elementId) {
+        console.log("test");
+        var myElement = document.getElementById(elementId);
+        console.log(myElement);
+        myElement.scrollIntoView({ behavior: "smooth" });
+      }
     </script>
   </body>
 </html>
