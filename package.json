@@ -4,7 +4,7 @@
   "description": "A basic website, hosted on Netlify",
   "default": "dist\\index.html",
   "scripts": {
-    "start": "parcel build index.html about.html --public-url ./",
+    "start": "parcel build index.html --public-url ./",
     "dev": "parcel index.html"
   },
   "repository": {
