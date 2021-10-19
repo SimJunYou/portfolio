@@ -21,6 +21,18 @@
       viewBox="0 0 100 100"
       preserveAspectRatio="none"
     >
+      <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop
+            offset="30%"
+            style="stop-color: var(--primary); stop-opacity: 1"
+          />
+          <stop
+            offset="100%"
+            style="stop-color: var(--gradient); stop-opacity: 1"
+          />
+        </linearGradient>
+      </defs>
       <path
         fill="#FFFCF2"
         fill-opacity="0.6"
@@ -28,17 +40,17 @@
         style="animation: path0 40s linear infinite alternate"
       />
       <path
-        fill="#EB5E28"
+        fill="url(#gradient)"
         fill-opacity="0.8"
         d="M-100 -100L200 -100L200 20L-100 20Z"
         style="animation: path1 20s linear infinite alternate"
       />
     </svg>
     <div id="Header" class="flex-container">
-      <img id="MainPic" src="public/me3.jpg" />
+      <img id="MainPic" src="public/me3.jpg" data-reveal="fade" />
       <div id="MainTitle">
-        <h1>Welcome!</h1>
-        <h2>
+        <h1 data-reveal="shrink">Welcome!</h1>
+        <h2 data-reveal="fade">
           I'm <b>Jun You</b>, and I'm a third year <br />
           <b>Computer Engineering</b> student in NUS.
         </h2>
@@ -47,20 +59,30 @@
         <button
           class="angled-gradient-button"
           onclick="scrollDownTo('AboutSection');"
+          data-reveal="fade"
+          data-reveal-delay="1"
         >
           About
         </button>
         <button
           class="angled-gradient-button"
           onclick="scrollDownTo('SkillsSection');"
+          data-reveal="fade"
+          data-reveal-delay="2"
         >
           Skills
         </button>
-        <button class="angled-gradient-button">Projects</button>
+        <button
+          class="angled-gradient-button"
+          data-reveal="fade"
+          data-reveal-delay="3"
+        >
+          Projects
+        </button>
       </div>
     </div>
     <div id="AboutSection" class="flex-container">
-      <div class="section-head"><h1>About Me</h1></div>
+      <div class="section-head" data-reveal="slideLeft"><h1>About Me</h1></div>
 
       <div id="AboutText" class="body-text">
         <strong id="FirstSentence"
@@ -110,7 +132,9 @@
       </div>
     </div>
     <div id="SkillsSection" class="flex-container">
-      <div class="section-head"><h1>My Skills</h1></div>
+      <div class="section-head" data-reveal="slideRight">
+        <h1>My Skills</h1>
+      </div>
       <div class="body-text">
         After various projects and university modules, here's what I know so
         far. This isn't in order of proficiency, but rather what I tend to use
@@ -190,43 +214,18 @@
     </div>
 
     <div id="ProjectsSection" class="flex-container">
-      <div class="section-head"><h1>My Projects</h1></div>
+      <div class="section-head" data-reveal="slideLeft"><h1>Projects</h1></div>
 
       <div id="ProjectsText" class="body-text">
         This part's a work-in-progress :)
       </div>
     </div>
-    <div id="ScrollIndicator">
+    <div id="ScrollIndicator" data-reveal="fade" data-reveal-delay="4">
       <i class="fas fa-chevron-down"></i>
       <i class="fas fa-chevron-down"></i>
       <i class="fas fa-chevron-down"></i>
     </div>
 
-    <script>
-      let hasScrolled = false;
-      function updateScrollHeight() {
-        let scrollVar =
-          window.pageYOffset /
-          (document.body.offsetHeight - window.innerHeight);
-        if (scrollVar > 0.5 && !hasScrolled) {
-          hasScrolled = true;
-        } else if (hasScrolled) {
-          return;
-        }
-        document.body.style.setProperty(
-          "--scroll",
-          window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
-        );
-      }
-      updateScrollHeight();
-      window.addEventListener("scroll", updateScrollHeight, false);
-
-      function scrollDownTo(elementId) {
-        console.log("test");
-        var myElement = document.getElementById(elementId);
-        console.log(myElement);
-        myElement.scrollIntoView({ behavior: "smooth" });
-      }
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>
