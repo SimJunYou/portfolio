@@ -1,6 +1,7 @@
 <html lang="en">
   <head>
-    <title>About Me</title>
+    <title>Sim Jun You</title>
+    <link rel="shortcut icon" type="image/ico" href="public/favicon/favicon.ico"/>
     <meta charset="UTF-8" />
     <meta name="description" content="Sim Jun You's Portfolio" />
     <meta name="author" content="Sim Jun You" />
@@ -94,7 +95,7 @@
         class="body-text"
         data-reveal-trigger="AboutSlideLeft"
       >
-        <strong id="FirstSentence"
+        <strong class="first-sentence"
           >Hi! My name is Jun You, and I like building things.</strong
         >
         <br />
@@ -232,17 +233,45 @@
         class="body-text"
         data-reveal-trigger="ProjectsSlideLeft"
       >
+        <h1>Excel Dashboard</h1>
+        <div class="project-img-container">
+          <img class="project-img" src="public/excel.png" />
+          <span class="project-img-subtitle"
+            >Fig. 1: I don't have the Excel sheet anymore, so here's the
+            dataflow diagram.<br />(some parts redacted for
+            confidentiality!)</span
+          >
+        </div>
+        I was assigned to create a pure Excel workbook that would process large
+        amounts of raw data and turn it into readable sheets and graphs which we
+        could then extract insights from. No Python or any external programs.
+        <br />
+        <br />
+        I actually didn't know PowerQuery existed before this, and was
+        investigating some kind of Power BI + Excel monstrosity of a solution.
+        Shortly after, I found out that the powerful data engine behind Power BI
+        was also available in Excel as Power Query. That was a big relief.
+        <br />
+        <br />
+        Anyways, I quickly picked up <b>Power Query and the M language</b>, and
+        put together this Excel workbook. It took in user input and
+        configurations as tables in the sheet, which Power Query read and
+        combined together with the raw data inflow to filter and transform it
+        into exactly what the user wants. I consider this my first foray into
+        data engineering -- though I guess I've barely gotten my toes wet at
+        this point.
+
         <h1>WallStweetBot</h1>
         <div class="project-img-container">
           <img class="project-img" src="public/wallstweetbot.jpg" />
           <span class="project-img-subtitle"
-            >Fig. 1: A screenshot of WallStweetBot in action.</span
+            >Fig. 2: Find him at @WallStweetBot on Telegram!<br />(Don't shut him down please)</span
           >
         </div>
-        After learning Python, I got hooked on making Telegram bots. The first
-        few I made were for simple stuff like downloading Youtube videos and
-        keeping todo lists, but as I got more comfortable with the API I started
-        trying more complicated projects.
+        After learning Python, I got hooked on making <b>Telegram bots</b>. The
+        first few I made were for simple stuff like downloading Youtube videos
+        and keeping todo lists, but as I got more comfortable with the API I
+        started trying more complicated projects.
         <br />
         <br />
         I used this bot for a good period of time, and it provides me with
@@ -262,7 +291,7 @@
         <div class="project-img-container">
           <img class="project-img" src="public/alex.png" />
           <span class="project-img-subtitle"
-            >Fig. 2: Click
+            >Fig. 3: Click
             <div class="link">
               <a href="https://www.youtube.com/watch?v=hUoLTi8OOZo&t=151s"
                 >here</a
@@ -280,9 +309,9 @@
         This one's a school project, but I'm pretty proud of how my group put it
         together. This was my first venture into combining different programs
         across different machines into one cohesive and fluid user experience. I
-        learned a lot about shell scripting in the process. I can't claim that
-        it was entirely my work, but I did write all the shell scripts that you
-        see in the video.
+        learned a lot about <b>the command line and shell scripting </b>in the
+        process. I can't claim that it was entirely my work, but I did write all
+        the shell scripts that you see in the video.
         <br />
         <br />
         I would say this was the project that pushed me to try more complicated
@@ -294,7 +323,7 @@
         <div class="project-img-container">
           <img class="project-img" src="public/website.jpg" />
           <span class="project-img-subtitle"
-            >Fig. 3: The wireframe of this website's first version!
+            >Fig. 4: The wireframe of this website's first version!
           </span>
         </div>
         My first attempt at a portfolio website was made with React, with a
@@ -312,14 +341,51 @@
         the same website with no frameworks or JS libraries whatsoever.
         <br />
         <br />
-        What you're seeing now is the second iteration of a pure HTML/CSS/JS
-        website with no extraneous libraries or frameworks. I know it's not the
-        prettiest and I'm not sure if I've followed best practice, but it's been
-        great practice for HTML/CSS fundamentals and beyond.
+        What you're seeing now is the
+        <b
+          >second iteration of a pure HTML/CSS/JS website with no extraneous
+          libraries or frameworks</b
+        >. I know it's not the prettiest and I'm not sure if I've followed best
+        practice, but it's been great practice for HTML/CSS fundamentals and
+        beyond.
         <br />
         <br />
       </div>
     </div>
+    <div id="ContactSection" class="flex-container">
+      <div class="section-head" id="ContactSlideRight" data-reveal="slideRight">
+        <h1>Contact Me</h1>
+      </div>
+      <div class="body-text" data-reveal-trigger="ContactSlideRight">
+        <strong class="first-sentence">Thanks for coming by! </strong>
+        <br />
+        <br />
+        To contact me for anything, please drop me an email at
+        <div class="link">
+          <a href="mailto:simjunyou@u.nus.edu">simjunyou@u.nus.edu</a>!
+        </div>
+        <br />
+        <br />
+        Also, I hope my projects have piqued some interest! I have a few other
+        projects, so if you'd like to take a deeper look at my projects, here's
+        my
+        <div class="link">
+          <a href="https://github.com/SimJunYou">Github.</a>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div>
+        <span>Made by Sim Jun You, 2021.</span
+        ><a href="https://github.com/SimJunYou" class="fab fa-github"></a>
+      </div>
+      <span
+        >Contact me at
+        <div class="link">
+          <a href="mailto:simjunyou@u.nus.edu">simjunyou@u.nus.edu</a>!
+        </div></span
+      >
+    </footer>
     <div id="ScrollIndicator" data-reveal="fade" data-reveal-delay="3">
       <i class="fas fa-chevron-down"></i>
       <i class="fas fa-chevron-down"></i>

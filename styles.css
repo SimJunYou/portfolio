@@ -54,6 +54,10 @@ body {
   gap: 1rem;
 }
 
+#ContactSection {
+  min-height: 50vh;
+}
+
 .section-head {
   background: var(--primary);
   width: 100%;
@@ -109,7 +113,7 @@ body {
   font-style: italic;
 }
 
-#FirstSentence {
+.first-sentence {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   text-shadow: 2px 2px var(--textshadow);
@@ -121,7 +125,8 @@ body {
 }
 
 .body-text > b {
-  font-style: bold;
+  font-weight: 500;
+  color: var(--gradient);
   text-shadow: 1px 1px var(--textshadow);
 }
 
@@ -192,9 +197,7 @@ body {
     font-size: 14px;
   }
 
-  #FirstSentence {
-    font-family: "Montserrat", sans-serif;
-    color: var(--primary);
+  .first-sentence {
     font-size: 24px;
   }
 }
@@ -371,6 +374,30 @@ body {
   /* [data-reveal=shrink] {
     transform: scale(2);
   } */
+}
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
+
+footer > div > span {
+  color: var(--light);
+}
+
+footer > span {
+  color: var(--light);
+}
+
+footer > div > a {
+  color: var(--primary);
+  margin-left: 0.5rem;
+  text-decoration: none;
 }
 
 /* SCROLL INDICATOR */
