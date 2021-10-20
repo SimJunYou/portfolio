@@ -49,7 +49,8 @@
     <div id="Header" class="flex-container">
       <img id="MainPic" src="public/me3.jpg" data-reveal="fade" />
       <div id="MainTitle">
-        <h1 data-reveal="shrink">Welcome!</h1>
+        <!-- <h1 id="Welcome" data-reveal="shrink">Welcome!</h1> -->
+        <h1 id="Welcome">Welcome!</h1>
         <h2 data-reveal="fade">
           I'm <b>Jun You</b>, and I'm a third year <br />
           <b>Computer Engineering</b> student in NUS.
@@ -60,7 +61,7 @@
           class="angled-gradient-button"
           onclick="scrollDownTo('AboutSection');"
           data-reveal="fade"
-          data-reveal-delay="1"
+          data-reveal-delay="1.5"
         >
           About
         </button>
@@ -68,23 +69,30 @@
           class="angled-gradient-button"
           onclick="scrollDownTo('SkillsSection');"
           data-reveal="fade"
-          data-reveal-delay="2"
+          data-reveal-delay="1.8"
         >
           Skills
         </button>
         <button
           class="angled-gradient-button"
+          onclick="scrollDownTo('ProjectsSection');"
           data-reveal="fade"
-          data-reveal-delay="3"
+          data-reveal-delay="2.1"
         >
           Projects
         </button>
       </div>
     </div>
     <div id="AboutSection" class="flex-container">
-      <div class="section-head" data-reveal="slideLeft"><h1>About Me</h1></div>
+      <div class="section-head" id="AboutSlideLeft" data-reveal="slideLeft">
+        <h1>About Me</h1>
+      </div>
 
-      <div id="AboutText" class="body-text">
+      <div
+        id="AboutText"
+        class="body-text"
+        data-reveal-trigger="AboutSlideLeft"
+      >
         <strong id="FirstSentence"
           >Hi! My name is Jun You, and I like building things.</strong
         >
@@ -132,10 +140,10 @@
       </div>
     </div>
     <div id="SkillsSection" class="flex-container">
-      <div class="section-head" data-reveal="slideRight">
+      <div class="section-head" id="SkillsSlideRight" data-reveal="slideRight">
         <h1>My Skills</h1>
       </div>
-      <div class="body-text">
+      <div class="body-text" data-reveal-trigger="SkillsSlideRight">
         After various projects and university modules, here's what I know so
         far. This isn't in order of proficiency, but rather what I tend to use
         each one for and how often I use them.
@@ -214,9 +222,15 @@
     </div>
 
     <div id="ProjectsSection" class="flex-container">
-      <div class="section-head" data-reveal="slideLeft"><h1>Projects</h1></div>
+      <div class="section-head" id="ProjectsSlideLeft" data-reveal="slideLeft">
+        <h1>Projects</h1>
+      </div>
 
-      <div id="ProjectsText" class="body-text">
+      <div
+        id="ProjectsText"
+        class="body-text"
+        data-reveal-trigger="ProjectsSlideLeft"
+      >
         This part's a work-in-progress :)
       </div>
     </div>
