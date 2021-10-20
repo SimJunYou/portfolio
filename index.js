@@ -63,26 +63,24 @@ let headerFadeInElements = [
   ...document.querySelectorAll("[data-reveal]"),
 ].filter((el) => el.dataset.reveal === "fade");
 
-headerFadeInElements.forEach((element) => {
-  element.setAttribute("style", "opacity:0; ");
-});
-
 document.onreadystatechange = () => {
   if (document.readyState === "complete") {
-    console.log(
-      document.getElementById("ScrollIndicator").getAttribute("style")
-    );
     headerFadeInElements.forEach((element) => {
       let delay = 0;
       if (element.hasAttribute('data-reveal-delay')) {
         delay = element.dataset.revealDelay;
-        console.log(delay);
       };
-      element.removeAttribute("data-reveal");
-      setTimeout(() => {
+      if (delay > 0) {
+        setTimeout(() => {
+          element.style = null;
+          element.classList.add("fade");
+          element.removeAttribute("data-reveal");
+        }, delay*1000);
+      } else {
+        element.style = null;
         element.classList.add("fade");
-        element.setAttribute("style", "opacity: 1; transition: opacity 1s 1s;");
-      }, delay*1000);
+        element.removeAttribute("data-reveal");
+      }
     });
   }
 };

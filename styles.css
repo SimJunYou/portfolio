@@ -218,8 +218,13 @@ body {
 }
 
 [data-reveal=fade] {
-  display: block;
+  transition: opacity 1s 1s;
   opacity: 0;
+}
+
+.fade {
+  transition: opacity 1s 1s;
+  opacity: 1;
 }
 
 [data-reveal=slideLeft] {
@@ -241,10 +246,6 @@ body {
 .slideRight {
   /* opacity: 1; */
   transform: translateX(0) skewY(-5deg);
-}
-
-.fade {
-  opacity: 1;
 }
 
 /* broke for some reason?? */
@@ -432,8 +433,10 @@ body {
   height: 7vh;
   padding-top: 5px;
   padding-bottom: 5px;
-  background-color: var(--medium);
+  border: solid 2px;
+  border-color: var(--medium);
   transition: all 0.3s;
+  border-radius: 15px;
 }
 
 .tier-icon-holder {
