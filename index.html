@@ -14,6 +14,7 @@
       crossorigin="anonymous"
     ></script>
   </head>
+
   <body>
     <svg
       class="background"
@@ -231,7 +232,92 @@
         class="body-text"
         data-reveal-trigger="ProjectsSlideLeft"
       >
-        This part's a work-in-progress :)
+        <h1>WallStweetBot</h1>
+        <div class="project-img-container">
+          <img class="project-img" src="public/wallstweetbot.jpg" />
+          <span class="project-img-subtitle"
+            >Fig. 1: A screenshot of WallStweetBot in action.</span
+          >
+        </div>
+        After learning Python, I got hooked on making Telegram bots. The first
+        few I made were for simple stuff like downloading Youtube videos and
+        keeping todo lists, but as I got more comfortable with the API I started
+        trying more complicated projects.
+        <br />
+        <br />
+        I used this bot for a good period of time, and it provides me with
+        finance/investment related tweets from a select group of
+        investment-related Twitter users. It provides a live feed in whatever
+        group it is started in, and there are some commands to do some specific
+        tweet scrapes, like for stock recommendations and so on.
+        <br />
+        <br />
+        The bot is hosted on Heroku with a hobby dyno so it runs permanently, so
+        it just feeds me and my friends with sketchy investment advice every now
+        and then. This was an interesting project involving the Twitter API
+        which I'd never used before and also a foray into the multitasking
+        aspect of Python (using the threading library).
+
+        <h1>Alex</h1>
+        <div class="project-img-container">
+          <img class="project-img" src="public/alex.png" />
+          <span class="project-img-subtitle"
+            >Fig. 2: Click
+            <div class="link">
+              <a href="https://www.youtube.com/watch?v=hUoLTi8OOZo&t=151s"
+                >here</a
+              >
+            </div>
+            for the video!
+          </span>
+        </div>
+        Alex is a LIDAR enabled remote controlled car. Whatever the LIDAR sees
+        is transmitted back to the remote controller and mapped. There are a 3
+        machines involved: The Raspberry Pi, the Arduino, and the client's
+        computer.
+        <br />
+        <br />
+        This one's a school project, but I'm pretty proud of how my group put it
+        together. This was my first venture into combining different programs
+        across different machines into one cohesive and fluid user experience. I
+        learned a lot about shell scripting in the process. I can't claim that
+        it was entirely my work, but I did write all the shell scripts that you
+        see in the video.
+        <br />
+        <br />
+        I would say this was the project that pushed me to try more complicated
+        projects like those you see above as well as some other
+        multi-machine/API projects. I'm definitely going to continue pursuing
+        similar projects in the future - possibly Smart Home IOT related?
+
+        <h1>Portfolio Website</h1>
+        <div class="project-img-container">
+          <img class="project-img" src="public/website.jpg" />
+          <span class="project-img-subtitle"
+            >Fig. 3: The wireframe of this website's first version!
+          </span>
+        </div>
+        My first attempt at a portfolio website was made with React, with a
+        super minimal backend in Koa (which I later I realised I didn't need for
+        a static site). There was lots of Bootstrap involved for stuff that I
+        didn't realise I could do with simple CSS too. I added nice animations
+        with react-spring and react-reveal. But as I worked, I realised that the
+        whole website was pretty bloated by a single-page static site standard.
+        <br />
+        <br />
+        I'm not really a HTML/CSS purist, but I prefer to avoid using libraries
+        where I can to stay as close to barebones as possible. Also, I actually
+        jumped straight into React/Koa without much practice in the fundamentals
+        of HTML and CSS. I read some tutorials and found that I could be making
+        the same website with no frameworks or JS libraries whatsoever.
+        <br />
+        <br />
+        What you're seeing now is the second iteration of a pure HTML/CSS/JS
+        website with no extraneous libraries or frameworks. I know it's not the
+        prettiest and I'm not sure if I've followed best practice, but it's been
+        great practice for HTML/CSS fundamentals and beyond.
+        <br />
+        <br />
       </div>
     </div>
     <div id="ScrollIndicator" data-reveal="fade" data-reveal-delay="3">
