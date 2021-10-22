@@ -1,7 +1,7 @@
 # My Portfolio Site
 ## _Version 2_
 
-A simple static site made in pure HTML/CSS/JS, hosted on Netlify. Very orange! See it live [here](simjunyou.netlify.app).
+A simple static site made in pure HTML/CSS/JS, hosted on Netlify. Very orange! See it live [here](http://simjunyou.netlify.app).
 
 ## Details
 
