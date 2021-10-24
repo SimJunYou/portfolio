@@ -6,7 +6,8 @@
   /* --dark: #251401; */
   --dark: #252422;
   --primary: #eb5e28;
-  --gradient: #dd4362;
+  /* --gradient: #dd4362; */
+  --gradient: #ed4769;
   /* --secondary: #d15424;
   --textshadow: #873414; */
   --secondary: #845953;
@@ -66,6 +67,7 @@ body {
   margin-top: 10%;
   margin-bottom: 10%;
   transform: skewY(-5deg);
+  overflow-x: hidden;
 }
 
 .section-head > h1 {

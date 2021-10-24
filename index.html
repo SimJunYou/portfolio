@@ -1,7 +1,11 @@
 <html lang="en">
   <head>
     <title>Sim Jun You</title>
-    <link rel="shortcut icon" type="image/ico" href="public/favicon/favicon.ico"/>
+    <link
+      rel="shortcut icon"
+      type="image/ico"
+      href="public/favicon/favicon.ico"
+    />
     <meta charset="UTF-8" />
     <meta name="description" content="Sim Jun You's Portfolio" />
     <meta name="author" content="Sim Jun You" />
@@ -174,7 +178,7 @@
         </div>
         <div class="tier-icon-holder">
           <img src="public/c.svg" class="tier-icon" alt="C" />
-          <p class="tier-icon-desc"><b>C</b><br />For SPEED.</p>
+          <p class="tier-icon-desc"><b>C</b><br />When Python is a bit too slow.</p>
         </div>
         <div class="tier-icon-holder">
           <img
@@ -244,41 +248,33 @@
         </div>
         I was assigned to create a pure Excel workbook that would process large
         amounts of raw data and turn it into readable sheets and graphs which we
-        could then extract insights from. No Python or any external programs.
+        could then extract insights from. No Python or external programs.
         <br />
         <br />
-        I actually didn't know PowerQuery existed before this, and was
-        investigating some kind of Power BI + Excel monstrosity of a solution.
-        Shortly after, I found out that the powerful data engine behind Power BI
-        was also available in Excel as Power Query. That was a big relief.
-        <br />
-        <br />
-        Anyways, I quickly picked up <b>Power Query and the M language</b>, and
-        put together this Excel workbook. It took in user input and
-        configurations as tables in the sheet, which Power Query read and
-        combined together with the raw data inflow to filter and transform it
-        into exactly what the user wants. I consider this my first foray into
-        data engineering -- though I guess I've barely gotten my toes wet at
-        this point.
+        I quickly picked up <b>Power Query and the M language</b>, and put
+        together this Excel workbook. It took in user input and configurations
+        as tables in the sheet, which Power Query read and combined together
+        with the raw data inflow to filter and transform it into exactly what
+        the user wants. Not exactly professional data engineering, but it was
+        fun regardless.
 
         <h1>WallStweetBot</h1>
         <div class="project-img-container">
           <img class="project-img" src="public/wallstweetbot.jpg" />
           <span class="project-img-subtitle"
-            >Fig. 2: Find him at @WallStweetBot on Telegram!<br />(Don't shut him down please)</span
+            >Fig. 2: Find him at
+            <div class="link">
+              <a href="https://t.me/WallStweetBot">@WallStweetBot</a>
+            </div>
+            on Telegram!<br />(Don't shut him down please)</span
           >
         </div>
-        After learning Python, I got hooked on making <b>Telegram bots</b>. The
-        first few I made were for simple stuff like downloading Youtube videos
-        and keeping todo lists, but as I got more comfortable with the API I
-        started trying more complicated projects.
-        <br />
-        <br />
-        I used this bot for a good period of time, and it provides me with
-        finance/investment related tweets from a select group of
-        investment-related Twitter users. It provides a live feed in whatever
-        group it is started in, and there are some commands to do some specific
-        tweet scrapes, like for stock recommendations and so on.
+        WallStweetBot is a <b>Telegram bot</b> that provides a live feed of
+        selected Twitter accounts' feeds in whatever group it is started in, and
+        there are some commands to do some specific tweet scrapes, like for
+        stock recommendations and so on. It's pretty barebones, since there's
+        basically no user configuration (because I intended it for personal
+        use).
         <br />
         <br />
         The bot is hosted on Heroku with a hobby dyno so it runs permanently, so
@@ -301,8 +297,8 @@
           </span>
         </div>
         Alex is a LIDAR enabled remote controlled car. Whatever the LIDAR sees
-        is transmitted back to the remote controller and mapped. There are a 3
-        machines involved: The Raspberry Pi, the Arduino, and the client's
+        is transmitted back to the client via the Raspberry Pi and mapped. There
+        are 3 machines involved: The Raspberry Pi, the Arduino, and the client's
         computer.
         <br />
         <br />
@@ -312,12 +308,6 @@
         learned a lot about <b>the command line and shell scripting </b>in the
         process. I can't claim that it was entirely my work, but I did write all
         the shell scripts that you see in the video.
-        <br />
-        <br />
-        I would say this was the project that pushed me to try more complicated
-        projects like those you see above as well as some other
-        multi-machine/API projects. I'm definitely going to continue pursuing
-        similar projects in the future - possibly Smart Home IOT related?
 
         <h1>Portfolio Website</h1>
         <div class="project-img-container">
@@ -329,16 +319,15 @@
         My first attempt at a portfolio website was made with React, with a
         super minimal backend in Koa (which I later I realised I didn't need for
         a static site). There was lots of Bootstrap involved for stuff that I
-        didn't realise I could do with simple CSS too. I added nice animations
-        with react-spring and react-reveal. But as I worked, I realised that the
-        whole website was pretty bloated by a single-page static site standard.
+        didn't realise I could do with simple CSS too. But as I worked, I
+        realised that the whole website was pretty bloated by a single-page
+        static site standard.
         <br />
         <br />
         I'm not really a HTML/CSS purist, but I prefer to avoid using libraries
-        where I can to stay as close to barebones as possible. Also, I actually
-        jumped straight into React/Koa without much practice in the fundamentals
-        of HTML and CSS. I read some tutorials and found that I could be making
-        the same website with no frameworks or JS libraries whatsoever.
+        where I can to stay as close to barebones as possible. After some
+        research, I basically just dove into making a pure HTML/CSS site to go
+        back to the basics.
         <br />
         <br />
         What you're seeing now is the
@@ -374,7 +363,9 @@
         </div>
       </div>
     </div>
-    <footer>
+
+    <!-- Keep the footer out of view for now -->
+    <!-- <footer>
       <div>
         <span>Made by Sim Jun You, 2021.</span
         ><a href="https://github.com/SimJunYou" class="fab fa-github"></a>
@@ -385,7 +376,8 @@
           <a href="mailto:simjunyou@u.nus.edu">simjunyou@u.nus.edu</a>!
         </div></span
       >
-    </footer>
+    </footer> -->
+
     <div id="ScrollIndicator" data-reveal="fade" data-reveal-delay="3">
       <i class="fas fa-chevron-down"></i>
       <i class="fas fa-chevron-down"></i>
